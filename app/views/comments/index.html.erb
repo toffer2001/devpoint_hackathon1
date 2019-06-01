@@ -1,2 +1,7 @@
-<h1>Comments#index</h1>
-<p>Find me in app/views/comments/index.html.erb</p>
+<h1>Comments</h1>
+
+<% @comments.each do |comment| %>
+<%= comment.body %>
+<br />
+<% end %>
+

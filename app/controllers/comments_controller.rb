@@ -9,10 +9,13 @@ class CommentsController < ApplicationController
   end
 
   def new
-    @comment = Comment.new
+    #@comment = Comment.new
+    @comment = current_user.comments.build
+    
   end
   
   def create
+    @comment = current_user.comments.build(comment_params)
 
     if @page.save
       redirect_to comments_path
