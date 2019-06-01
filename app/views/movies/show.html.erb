@@ -17,7 +17,8 @@
 
 <ul class="list-group list-group-flush">
 <% @movie.comments.each do |c| %>
-<li class="list-group-item"><%= c.body%></li>
+<li class="list-group-item"><%= c.body%> <%= link_to "Edit", edit_movie_comment_path(@movie.id, c)%></li>
+
 <% end %>
 </ul>
 
