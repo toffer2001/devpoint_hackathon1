@@ -2,6 +2,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Movie.destroy_all
+
 Movie.create(title: 'The Dark Night', duration: '2hr 32min', genre: 'Action', description: 'http://www.imdb.com/title/tt0468569/', trailer: 'https://www.youtube.com/embed/EXeTwQWrcwY' 
 ) 
 Movie.create( title: 'The Bourne Identity', duration: '1hr 59min', genre: 'Action', description: 'http://www.imdb.com/title/tt0258463/', trailer: 'https://www.youtube.com/embed/cD-uQreIwEk' 
