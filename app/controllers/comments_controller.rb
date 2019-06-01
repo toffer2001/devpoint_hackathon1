@@ -25,12 +25,11 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    @comment = @movie.comments.new
+    @comment = Comment.find(params[:id])
     render partial: "form"
   end
 
   def update
-    @comment = @movie.comments.new
     if @comment.update(comment_params)
       redirect_to movie_comments_path(@movie)
     else
