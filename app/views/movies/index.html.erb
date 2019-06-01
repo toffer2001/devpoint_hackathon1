@@ -1,2 +1,8 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<h1>Movies</h1>
+<h2>Click a Movie To View Content</h2>
+<%= link_to 'Add a New Movie', new_movie_path %>
+<ul>
+  <% @movies.each do |movie| %>
+    <li><%= link_to movie.title, movie, method: :delete %></li>
+  <% end %>
+</ul>

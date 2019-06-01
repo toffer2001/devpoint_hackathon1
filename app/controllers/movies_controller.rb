@@ -10,12 +10,16 @@ class MoviesController < ApplicationController
 
   def new
     @movie = Movie.new
+    render partial: "form"
   end
 
   def edit
+    render partial: "form"
   end
   
   def destroy
+    @movie.destroy
+    redirect_to movies_path
   end
 
   def update
