@@ -1,20 +1,33 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="container">
 <h1><%= @movie.id ? 'Edit Movie' : 'Create Movie' %></h1>
 <hr />
 <%= form_for @movie do |f| %>
+  <div class="field form-group">
   <%= f.label :title %>
-  <%= f.text_field :title, required: true, autofocus: true %>
+  <%= f.text_field :title, required: true, autofocus: true, class: 'form-control' %>
+  </div>
 
+  <div class="field form-group">
   <%= f.label :duration %>
-  <%= f.text_field :duration, required: true, autofocus: true %>
+  <%= f.text_field :duration, required: true, autofocus: true, class: 'form-control' %>
+  </div>
 
+  <div class="field form-group">
   <%= f.label :genre %>
-  <%= f.text_field :genre, required: true, autofocus: true %>
+  <%= f.text_field :genre, required: true, autofocus: true, class: 'form-control' %>
+  </div>
 
+  <div class="field form-group">
   <%= f.label :description %>
-  <%= f.text_field :description, required: true, autofocus: true %>
+  <%= f.text_field :description, required: true, autofocus: true, class: 'form-control' %>
+  </div>
 
+  <div class="field form-group">
   <%= f.label :trailer %>
-  <%= f.text_field :trailer, required: true, autofocus: true %>
+  <%= f.text_field :trailer, required: true, autofocus: true, class: 'form-control' %>
+  </div>
 
   <%= f.submit %>
 <% end %>
+</div>

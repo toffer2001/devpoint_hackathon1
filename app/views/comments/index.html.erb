@@ -2,8 +2,8 @@
 
 <%= link_to "Add New Comment", new_movie_comment_path(@movie) %>
 
+<ul class="list-group list-group-flush">
 <% @comments.each do |comment| %>
-<%= comment.body %>
-<br />
+<li class="list-group-item"><%= comment.body%></li>
 <% end %>
-
+</ul>
