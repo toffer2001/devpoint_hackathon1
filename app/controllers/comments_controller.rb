@@ -48,3 +48,5 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:body, :user_id, :movie_id)
   end
 end
+
+puts "seeded"
