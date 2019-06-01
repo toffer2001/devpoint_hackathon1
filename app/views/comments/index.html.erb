@@ -1,5 +1,7 @@
 <h1>Comments</h1>
 
+<%= link_to "Add New Comment", new_movie_comment_path(@movie) %>
+
 <% @comments.each do |comment| %>
 <%= comment.body %>
 <br />
