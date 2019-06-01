@@ -79,3 +79,4 @@ duration: '2hr 34min', genre: 'Drama', description: 'http://www.imdb.com/title/t
 Movie.create( title: 'Swingers', 
 duration: '1hr 36min', genre: 'Drama', description: 'http://www.imdb.com/title/tt0117802/', trailer: 'https://www.youtube.com/embed/nWCct8XbQD0' 
 ) 
+puts "seeded"
