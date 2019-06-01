@@ -1,6 +1,16 @@
 <h1>Movies</h1>
 <h1><%= @movie.title %></h1>
 <hr />
+
+<iframe width="900" height="500" src="<%= @movie.trailer %>">
+</iframe>
+
+<br />
+
+<%= @movie.duration %> 
+<%= @movie.genre %>
+<%= link_to 'More Info', @movie.description %>
+
 <p>What would you like to do?</p>
 <%= link_to 'View Comments', movie_comments_path(@movie) %>
 <br />
