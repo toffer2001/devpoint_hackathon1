@@ -4,6 +4,7 @@
     <tr>
       <th scope="col">Title</th>
       <th scope="col">Genre</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -11,6 +12,8 @@
         <tr>
         <td><%= link_to movie.title, movie_path(movie) %></td>
         <td><%= movie.genre %></td>
+        <td><iframe width="150" height="100" src="<%= movie.trailer %>">
+</iframe></td>
       </tr>
     <% end %>
   </tbody>
