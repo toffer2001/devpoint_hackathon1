@@ -1,16 +1,16 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only:[:show, :edit,:update, :destroy]
+  before_action :set_comment, only: [:show, :edit, :update, :destroy]
   before_action :set_movie
 
   def index
-    @comments = Comment.all
+    @comments = @movie.comments.all
   end
 
   def show
   end
 
   def new
-    #@comment = Comment.new
+    # @comment = Comment.new
     @comment = current_user.comments.build
     
   end
@@ -50,8 +50,10 @@ class CommentsController < ApplicationController
 
   def set_movie
     @movie = Movie.find(params[:movie_id])
+  end
 
   def comment_params
     params.require(:comment).permit(:body, :user_id, :movie_id)
   end
+
 end
