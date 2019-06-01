@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only:[:show, :edit,:update, :destroy]
+  before_action :set_movie
 
   def index
     @comments = Comment.all
@@ -44,12 +45,13 @@ class CommentsController < ApplicationController
   private
   
   def set_comment
-    @comment= Comment.find(params[:id])
+    @comment = Comment.find(params[:id])
   end
+
+  def set_movie
+    @movie = Movie.find(params[:movie_id])
 
   def comment_params
     params.require(:comment).permit(:body, :user_id, :movie_id)
   end
 end
-
-puts "seeded"
